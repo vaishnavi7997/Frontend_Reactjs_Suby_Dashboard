@@ -1,38 +1,296 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* overflow-y: auto; */
+  overflow: hidden;
+  flex: 1;
+  height: 100vh;
+}
+
+/* Navbar */
+.navSection {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #212121;
+  padding: 0 30px;
+  background-color: #adb5bdcd;
+  border-bottom: 1px solid #b8b6b6;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Collection (Main Layout) */
+.collectionSection {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sideBarSection {
+  width: 200px;
+  background-color: #6c757d4c;
+  padding: 30px;
+  height: 90vh;
+  border-right: 1px solid #e0e0e0;
+}
+
+.sideBarSection ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sideBarSection ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.sideBarSection ul li:hover {
+  color: #660708;
+}
+
+/* Login Section */
+.loginSection {
+  margin-bottom: 80px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4d4d448;
+  cursor: pointer;
+}
+
+.autnForm {
+  padding-top: 0%;
+  margin: 15px;
+  width: 100%;
+  max-width: 350px;
+  background-color: #f5f5f5;
+  padding: 30px ;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px 2px black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.autnForm h3 {
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 20px;
+}
+
+.autnForm label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.autnForm input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btnSubmit button {
+  width: 100%;
+  padding: 10px;
+  background-color: #660708;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btnSubmit button:hover {
+  background-color: #a4161a;
+}
+
+/* Register Section */
+.registerSection {
+  margin-bottom: 80px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4d4d448;
+  cursor: pointer;
+}
+
+/* FirmSection add firm */
+.firmSection {
+  flex: 1;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4d4d488;
+}
+.tableForm {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+.tableForm label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.tableForm input {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 10px;
+}
+.tableForm h3 {
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 20px;
+}
+
+/*checkbox*/
+.checkboxPage {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 70vh;
+  overflow: hidden;
+}
+/* Checkbox input layout */
+.checkInp {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.inputsContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5px;
+  background-color: #fafafa;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.checkBoxContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #333;
+}
+/* Responsive */
+@media (max-width: 600px) {
+  .tableForm {
+    padding: 20px;
+  }
+
+  .checkBoxContainer {
+    min-width: 120px;
+  }
+}
+
+/* Products Table */
+.product-table-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Table styles */
+.product-table {
+  width: 50vw;
+  border-collapse: collapse;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-left: 10rem;  
+}
+
+.product-table thead {
+  background-color: #333333e3;
+  color: #fff;
+  text-align: left;
+}
+
+.product-table th,
+.product-table td {
+    width: 50vw;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product-table tbody tr:hover {
+  background-color: #e1e1e167;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.product-table img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  padding: 8px 12px;
+  background-color: #660708;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #a4161a;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  color: #494949;
+}
+
+/*Not Found Page*/
+.errorSection{
+  width: 100%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.errorSection h1{
+  font-size: 3rem;
+  color: #c0392b;
 }
